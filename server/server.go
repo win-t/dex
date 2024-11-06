@@ -45,6 +45,7 @@ import (
 	"github.com/dexidp/dex/connector/oidc"
 	"github.com/dexidp/dex/connector/openshift"
 	"github.com/dexidp/dex/connector/saml"
+	"github.com/dexidp/dex/connector/win_test_google"
 	"github.com/dexidp/dex/storage"
 	"github.com/dexidp/dex/web"
 )
@@ -654,6 +655,7 @@ var ConnectorsConfig = map[string]func() ConnectorConfig{
 	"github":          func() ConnectorConfig { return new(github.Config) },
 	"gitlab":          func() ConnectorConfig { return new(gitlab.Config) },
 	"google":          func() ConnectorConfig { return new(google.Config) },
+	"win_test_google": func() ConnectorConfig { return new(win_test_google.Config) },
 	"oidc":            func() ConnectorConfig { return new(oidc.Config) },
 	"oauth":           func() ConnectorConfig { return new(oauth.Config) },
 	"saml":            func() ConnectorConfig { return new(saml.Config) },
